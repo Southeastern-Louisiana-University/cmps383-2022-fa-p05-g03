@@ -1,19 +1,27 @@
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
-import './App.css';
-import NavBar from "./components/NavBar/NavBar";
+import * as React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import NavBar from './components/NavBar/NavBar';
 
-function App() {
+const sections = [
+    { title: 'CONSOLES', url: '/' },
+    { title: 'GAMES', url: '/' },
+    { title: 'ACCESSORIES', url: '/' },
+    { title: 'MERCH', url: '/' },
+];
 
+const theme = createTheme();
+
+export default function App() {
     return (
-        <div className="App">
-            <BrowserRouter>
-                <NavBar />
-                <Routes>
-                    
-                </Routes>
-            </BrowserRouter>
-        </div>
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Container maxWidth="lg">
+                <NavBar title="GAME X-CHANGE" sections={sections} />
+                <main>
+                </main>
+            </Container>
+        </ThemeProvider>
     );
 }
-
-export default App;
