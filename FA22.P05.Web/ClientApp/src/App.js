@@ -5,7 +5,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import NavBar from './components/NavBar/NavBar';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
-import LoginPage from './pages/LoginPage/loginPage';
+import LoginPage from './pages/LoginPage/LoginPage';
 
 const sections = [
     { title: 'CONSOLES', url: '/' },
