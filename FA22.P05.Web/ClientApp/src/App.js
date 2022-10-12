@@ -2,7 +2,9 @@ import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+
 import NavBar from './components/NavBar/NavBar';
+import SignUpPage from './pages/SignUpPage/SignUpPage';
 
 const sections = [
     { title: 'CONSOLES', url: '/' },
