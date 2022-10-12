@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import NavBar from './components/NavBar/NavBar';
+import SignUpPage from './pages/SignUpPage/SignUpPage';
+
+const sections = [
+    { title: 'CONSOLES', url: '/' },
+    { title: 'GAMES', url: '/' },
+    { title: 'ACCESSORIES', url: '/' },
+    { title: 'MERCH', url: '/' },
+];
+
+const theme = createTheme();
+
+export default function App() {
+    return (
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Container maxWidth="lg">
+                <NavBar title="GAME X-CHANGE" sections={sections} />
+                <main>
+                </main>
+            </Container>
+        </ThemeProvider>
+    );
 }
-
-export default App;
