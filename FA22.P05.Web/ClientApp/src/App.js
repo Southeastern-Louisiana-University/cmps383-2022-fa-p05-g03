@@ -8,7 +8,7 @@ import NavBar from './components/NavBar/NavBar';
 import HomePage from './pages/HomePage/HomePage';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
 import LoginPage from './pages/LoginPage/LoginPage';
-import ListingPage from './pages/ListingPage/ListingPage';
+import TablePage from './pages/TablePage/TablePage';
 import UserPage from './pages/UserPage/UserPage';
 import background from './components/background.mp4'
 
@@ -50,9 +50,9 @@ export default function App() {
                             <UserPage>
                                 <Link to="/UserPage">UserPage</Link>
                             </UserPage>
-                            <ListingPage>
-                                <Link to="/ListingPage">ListingPage</Link>
-                            </ListingPage>
+                            <TablePage>
+                                <Link to="/TablePage">TablePage</Link>
+                            </TablePage>
                         </NavBar>
                     </Container>
             </ThemeProvider>
