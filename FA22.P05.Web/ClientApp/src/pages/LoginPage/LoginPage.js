@@ -73,7 +73,7 @@ export default function Login() {
                             sx={{ mt: 3, mb: 2 }}
                             color="inherit"
                         >
-                            Sign Up
+                            Submit
                         </Button>
                         <Grid container justifyContent="flex-end">
                             <Grid item>
