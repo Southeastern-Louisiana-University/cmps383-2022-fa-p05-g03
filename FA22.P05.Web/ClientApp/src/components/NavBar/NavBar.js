@@ -4,10 +4,10 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
-import styles from "./NavBar.css"
 import TextField from '@mui/material/TextField';
 import { useNavigate } from "react-router-dom";
 
+import NavBar from './NavBar.css';
 
     export default function Header(props) {
         const { sections, title } = props;
@@ -25,12 +25,12 @@ import { useNavigate } from "react-router-dom";
 
         return (
             <React.Fragment>
-                <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                <Toolbar sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor: "black"}}>
                     <Button variant="fill" size="small" onClick={LoginPage}>LOGIN</Button>
                     <Typography
                         component="h2"
                         variant="h5"
-                        color="inherit"
+                        color="white"
                         align="center"
                         noWrap
                         sx={{ flex: 1 }}
@@ -44,9 +44,8 @@ import { useNavigate } from "react-router-dom";
                 <Toolbar
                     component="nav"
                     variant="dense"
-                    sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
-                >
-                    <TextField placeholder="SEARCH" variant="outlined" color="secondary" size="small" focused />
+                    sx={{ justifyContent: 'space-between', overflowX: 'auto', color: "white", backgroundColor: "black" }}>
+                    <TextField sx={{ input: { background: "black", color: "white" } }} variant="outlined" color="secondary" placeholder="SEARCH" size="small" focused />
                     {sections.map((section) => (
                         <Link
                             color="inherit"
