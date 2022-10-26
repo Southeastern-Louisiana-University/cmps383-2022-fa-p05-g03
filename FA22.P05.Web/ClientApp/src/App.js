@@ -39,7 +39,7 @@ export default function App() {
                     <Container maxWidth="lg">
                         <NavBar title="GAME X-CHANGE" sections={sections} >
                             <HomePage>
-                                <Link to="/HomePage">HomePage</Link>
+                                <Link to="/">HomePage</Link>
                             </HomePage>
                             <SignUpPage>
                                 <Link to="/SignUpPage">SignUpPage</Link>
