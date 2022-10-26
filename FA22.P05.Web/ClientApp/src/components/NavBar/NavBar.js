@@ -2,7 +2,6 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import TextField from '@mui/material/TextField';
 import { useNavigate } from "react-router-dom";
@@ -26,7 +25,7 @@ import logo from '../logo.png';
 
         return (
             <React.Fragment>
-                <Toolbar sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor: "black", justifyContent: "space-between" }}>
+                <Toolbar sx={{ borderLeft: 3, borderRight: 3, borderColor: 'white', backgroundColor: "black", justifyContent: "space-between" }}>
                     <Button variant="fill" size="small" onClick={LoginPage}>LOGIN</Button>
                     <img src={logo} alt="Game X-Change" width="250" height="100" />
                     <Button variant="fill" size="small" onClick={SignUpPage} >
@@ -36,8 +35,8 @@ import logo from '../logo.png';
                 <Toolbar
                     component="nav"
                     variant="dense"
-                    sx={{ justifyContent: 'space-between', overflowX: 'auto', color: "white", backgroundColor: "black" }}>
-                    <TextField sx={{ input: { background: "black", color: "white" } }} variant="outlined" color="secondary" placeholder="SEARCH" size="small" focused />
+                    sx={{ borderLeft: 3, borderRight: 3, borderBottom: 3, borderColor: 'white', justifyContent: 'space-between', overflowX: 'auto', color: "white", backgroundColor: "black" }}>
+                    <TextField sx={{ input: { background: "black", color: "white" } }} variant="filled" color="white" placeholder="SEARCH" size="small" focused />
                     {sections.map((section) => (
                         <Link
                             color="inherit"

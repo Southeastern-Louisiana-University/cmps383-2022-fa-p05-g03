@@ -41,12 +41,14 @@ export default function Login() {
                     <CssBaseline />
                     <Box
                         sx={{
-                            marginTop: 8,
+                            marginTop: 6,
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
                             background: 'black',
-                            padding: '25px 25px 25px 25px'
+                            padding: '25px 25px 25px 25px',
+                            border: 3,
+                            borderColor: 'white'
                         }}
                     >
                         <a href="/">
