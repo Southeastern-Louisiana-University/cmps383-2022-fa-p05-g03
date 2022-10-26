@@ -8,6 +8,7 @@ import TextField from '@mui/material/TextField';
 import { useNavigate } from "react-router-dom";
 
 import NavBar from './NavBar.css';
+import logo from '../logo.png';
 
     export default function Header(props) {
         const { sections, title } = props;
@@ -25,18 +26,9 @@ import NavBar from './NavBar.css';
 
         return (
             <React.Fragment>
-                <Toolbar sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor: "black"}}>
+                <Toolbar sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor: "black", justifyContent: "space-between" }}>
                     <Button variant="fill" size="small" onClick={LoginPage}>LOGIN</Button>
-                    <Typography
-                        component="h2"
-                        variant="h5"
-                        color="white"
-                        align="center"
-                        noWrap
-                        sx={{ flex: 1 }}
-                    >
-                        {title}
-                    </Typography>
+                    <img src={logo} alt="Game X-Change" width="250" height="100" />
                     <Button variant="fill" size="small" onClick={SignUpPage} >
                         SIGNUP
                     </Button>
