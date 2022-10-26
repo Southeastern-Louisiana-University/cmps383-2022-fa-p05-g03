@@ -13,12 +13,12 @@ const rootElement = document.getElementById("root");
 render(
     <BrowserRouter>
         <Routes>
-            <Route path="/" element={<App />} />
-            <Route path="/" element={<HomePage />} />
-            <Route path="SignUpPage" element={<SignUpPage />} />
-            <Route path="LoginPage" element={<LoginPage />} />
-            <Route path="UserPage" element={<UserPage />} />
-            <Route path="ListingPage" element={<ListingPage />} />
+            <Route path="/" element={<App />}>
+                <Route path="SignUpPage" element={<SignUpPage />} />
+                <Route path="LoginPage" element={<LoginPage />} />
+                <Route path="UserPage" element={<UserPage />} />
+                <Route path="ListingPage" element={<ListingPage />} />
+            </Route>
         </Routes>
     </BrowserRouter>,
     rootElement

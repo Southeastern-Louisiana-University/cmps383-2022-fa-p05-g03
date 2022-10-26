@@ -21,16 +21,6 @@ export default function SignUp() {
 
     return (
         <div>
-            <video src={background} autoPlay loop muted style={{
-                position: "absolute",
-                width: "100%",
-                left: "50%",
-                top: "50%",
-                height: "100%",
-                objectFit: "cover",
-                transform: "translate(-50%, -50%)",
-                zIndex: "-1"
-            }} />
             <ThemeProvider theme={theme}>
                 <Container component="main" maxWidth="xs">
                     <CssBaseline />
