@@ -8,7 +8,7 @@ import NavBar from "./components/NavBar/NavBar";
 import background from "./components/background.mp4";
 
 const sections = [
-    { title: "CONSOLES", url: "/" },
+    { title: "See Listings", url: "/ListingPage" },
     { title: "GAMES", url: "/" },
     { title: "ACCESSORIES", url: "/" },
     { title: "MERCH", url: "/" },
