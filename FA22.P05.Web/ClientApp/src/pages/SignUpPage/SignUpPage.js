@@ -1,16 +1,15 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import * as React from "react";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import Link from "@mui/material/Link";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-import logo from '../../components/logo.png';
-import background from '../../components/background.mp4';
+import logo from "../../components/logo.png";
 
 const theme = createTheme();
 
@@ -27,25 +26,37 @@ export default function SignUp() {
                     <Box
                         sx={{
                             marginTop: 6,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            background: 'black',
-                            padding: '25px 25px 25px 25px',
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            background: "black",
+                            padding: "25px 25px 25px 25px",
                             border: 3,
-                            borderColor: 'white'
+                            borderColor: "white",
                         }}
                     >
                         <a href="/">
-                            <img src={logo} alt="Game X-Change" width="250" height="100" onClick="" />
+                            <img
+                                src={logo}
+                                alt="Game X-Change"
+                                width="250"
+                                height="100"
+                                onClick=""
+                            />
                         </a>
                         <Typography component="h1" variant="h5" color="white">
                             REGISTER
                         </Typography>
-                        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+                        <Box
+                            component="form"
+                            noValidate
+                            onSubmit={handleSubmit}
+                            sx={{ mt: 3 }}
+                        >
                             <Grid container spacing={2}>
                                 <Grid item xs={12} sm={6}>
-                                    <TextField sx={{ input: { background: "white", color: "black" } }}
+                                    <TextField
+                                        sx={{ input: { background: "white", color: "black" } }}
                                         autoComplete="given-name"
                                         name="firstName"
                                         required
@@ -58,7 +69,8 @@ export default function SignUp() {
                                     />
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
-                                    <TextField sx={{ input: { background: "white", color: "black" } }}
+                                    <TextField
+                                        sx={{ input: { background: "white", color: "black" } }}
                                         required
                                         fullWidth
                                         id="lastName"
@@ -70,7 +82,8 @@ export default function SignUp() {
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <TextField sx={{ input: { background: "white", color: "black" } }}
+                                    <TextField
+                                        sx={{ input: { background: "white", color: "black" } }}
                                         required
                                         fullWidth
                                         id="email"
@@ -82,7 +95,8 @@ export default function SignUp() {
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <TextField sx={{ input: { background: "white", color: "black" } }}
+                                    <TextField
+                                        sx={{ input: { background: "white", color: "black" } }}
                                         required
                                         fullWidth
                                         name="password"
@@ -94,7 +108,9 @@ export default function SignUp() {
                                         color="secondary"
                                     />
                                 </Grid>
-                                <Grid item xs={12}> </Grid>
+                                <Grid item xs={12}>
+                                    {" "}
+                                </Grid>
                             </Grid>
                             <Button
                                 type="submit"
