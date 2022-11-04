@@ -8,15 +8,17 @@ import NavBar from './components/NavBar/NavBar';
 import HomePage from './pages/HomePage/HomePage';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
 import LoginPage from './pages/LoginPage/LoginPage';
-import ListingPage from './pages/ListingPage/ListingPage';
+import ListingPage from './pages/ListingPage/ListingPage.js';
 import UserPage from './pages/UserPage/UserPage';
 import background from './components/background.mp4'
+
 
 const sections = [
     { title: 'CONSOLES', url: '/' },
     { title: 'GAMES', url: '/' },
     { title: 'ACCESSORIES', url: '/' },
     { title: 'MERCH', url: '/' },
+    { title: 'Listings', url: '/ListingPage'}
 ];
 
 const theme = createTheme();

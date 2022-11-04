@@ -1,36 +1,10 @@
-﻿import 'bootstrap/dist/css/bootstrap.css';
-import './index.css';
-
-import React from 'react';
-import sampleImage from '../logo192.png';
-
+﻿import React, { Component } from 'react';
+import ProductRow from './ProductRow';
 import Commerce from '@chec/commerce.js';
-
-
-
-
-const ProductRow = () => {
-    return (
-        <div className="row product">
-            <div className="col-md-2">
-                <img src={image} alt={name} height="150" />
-            </div>
-            <div className="col-md-8 product-detail">
-                <h4>{name}</h4>
-                <div dangerouslySetInnerHTML={{ __html: description }}></div>
-            </div>
-            <div className="col-md-2 product-price">
-                {price}
-            </div>
-        </div>
-    );
-}
-
-
 
 const commerce = new Commerce('<your_api_key>');
 
-class ProductList extends Component {
+class ListingPage extends Component {
     constructor(props) {
         super(props);
 
@@ -58,16 +32,4 @@ class ProductList extends Component {
     }
 }
 
-
-
-function App() {
-    return (
-        <div className="container">
-            <header className="header">
-                <h1>My Products</h1>
-            </header>
-            <ProductList />
-        </div>
-    );
-}
-
+export default ListingPage;
