@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "FA22.P05.Tests.Web": {
+      "commandName": "Project"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "environmentVariables": {},
+      "distributionName": ""
+    }
+  }
+}
