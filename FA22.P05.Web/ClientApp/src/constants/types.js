@@ -14,7 +14,7 @@ export type AnyObject = {
     [index: string]: any;
 };
 
-export  ListingDTO  = {
+export  ListingDto  = {
     firstName: string;
     lastName: string;
     socialSecurityNumber: string;
