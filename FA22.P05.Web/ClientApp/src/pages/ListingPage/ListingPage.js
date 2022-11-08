@@ -1,4 +1,4 @@
-﻿import "animate.css"
+﻿
 import axios from "axios"
 import React, { useEffect, useState } from "react"
 import { useHistory } from "react-router-dom"
@@ -42,8 +42,8 @@ export const Listing = () => {
 
     return (
         <div className=".flex-box-centered-content-listing-getById">
-            {employeesToShow &&
-                employeesToShow.map(x => {
+            {listingsToShow &&
+                listingsToShow.map(x => {
                     return (
                         <div className="flex-row-fill-listing-getById">
                             <Segment raised className="employee-getById-segments">
