@@ -1,17 +1,16 @@
-﻿
-import axios from "axios"
+﻿import axios from "axios"
 import React, { useEffect, useState } from "react"
-import { useHistory } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { Button, Segment } from "semantic-ui-react"
-import { baseUrl } from "./constants/baseUrl"
-import { render } from "./index"
-import "../ListingPage/ListingPage.css"
+import baseUrl from "../../baseUrl"
+import { render } from "../../index"
+import "./ListingPage.css"
 
 export const Listing = () => {
+    const navigate = useNavigate();
     const [listings, setlistings] = useState()
     const [didLoad, setDidLoad] = useState(false)
     const [Error, setError] = useState("")
-    const history = useHistory()
 
     useEffect(() => {
         axios.get(`${baseUrl}/api/listings`).then(response => {
@@ -53,7 +52,7 @@ export const Listing = () => {
                                     <Button
                                         color="violet"
                                         onClick={() => {
-                                            history.push(
+                                            navigate.push(
                                                 render.listingGetById.replace(":id", `${x.id}`)
                                             )
                                         }}

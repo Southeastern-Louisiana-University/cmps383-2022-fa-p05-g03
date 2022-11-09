@@ -2,17 +2,10 @@ import * as React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 import NavBar from "./components/NavBar/NavBar";
 import background from "./components/background.mp4";
-
-const sections = [
-    { title: "See Listings", url: "/ListingPage" },
-    { title: "GAMES", url: "/" },
-    { title: "ACCESSORIES", url: "/" },
-    { title: "MERCH", url: "/" },
-];
 
 const theme = createTheme();
 
