@@ -1,5 +1,4 @@
-﻿
-export type ApiResponse<T> = {
+﻿/*export type ApiResponse<T> = {
     data: T,
     errors: Error[],
     hasErrors: boolean,
@@ -21,4 +20,4 @@ export type ListingDto  = {
     startUtc: Date,
     endUtc: Date
     
-};
+};*/

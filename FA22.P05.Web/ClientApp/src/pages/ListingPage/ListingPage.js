@@ -1,8 +1,8 @@
 ﻿import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ListingDto } from "../../constants/types";
 import "./ListingPage.css";
+import {Button, Segment} from 'semantic-ui-react'
 
 export const Listing = () => {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ export const Listing = () => {
   const [Error, setError] = useState("");
 
   useEffect(() => {
-      axios.get < ListingDto[]> (`/api/listings`)
+      axios.get (`/api/listings`)
           .then((response) => {
       console.log("message");
       if (response.data.hasErrors) {
