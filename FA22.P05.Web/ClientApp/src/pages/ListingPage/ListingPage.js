@@ -1,10 +1,10 @@
-﻿import axios from "axios"
-import React, { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
-import { Button, Segment } from "semantic-ui-react"
-import baseUrl from "../../baseUrl"
-import { render } from "../../index"
-import "./ListingPage.css"
+﻿import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Button, Segment } from "semantic-ui-react";
+import baseUrl from "../../baseUrl";
+import { render } from "../../index";
+import "./ListingPage.css";
 
 export const Listing = () => {
     const navigate = useNavigate();
@@ -67,3 +67,4 @@ export const Listing = () => {
         </div>
     )
 }
+export default Listing;

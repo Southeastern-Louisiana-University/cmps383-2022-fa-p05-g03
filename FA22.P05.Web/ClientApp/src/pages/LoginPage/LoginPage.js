@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Redirect } from 'react';
 import axios from 'axios';
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -39,7 +39,7 @@ export default function Login() {
             },
         })
             .then((res) => {
-                if (res.status == 200) {
+                if (res.status === 200) {
                     setRedirect(true);
                 }
             })

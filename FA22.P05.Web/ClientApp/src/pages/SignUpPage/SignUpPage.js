@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Redirect } from 'react';
 import axios from 'axios';
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -36,11 +36,10 @@ const SignUp = () => {
                 data: {
                     username: username,
                     password: password,
-                    email: email,
                 },
             })
                 .then((res) => {
-                    if (res.status == 200) {
+                    if (res.status === 200) {
                         setRedirect(true);
                     }
                 })
@@ -91,7 +90,6 @@ const SignUp = () => {
                         <Box
                             component="form"
                             noValidate
-                            onSubmit={handleSubmit}
                             sx={{ mt: 3 }}
                         >
                             <Grid container spacing={2}>
