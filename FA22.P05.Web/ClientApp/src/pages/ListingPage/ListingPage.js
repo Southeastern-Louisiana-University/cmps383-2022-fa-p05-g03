@@ -3,8 +3,8 @@ import axios from "axios"
 import React, { useEffect, useState } from "react"
 import { useHistory } from "react-router-dom"
 import { Button, Segment } from "semantic-ui-react"
-import { baseUrl } from "../../../constants/baseUrl"
-import { routes } from "../../../routes/config"
+import { baseUrl } from "./constants/baseUrl"
+import { render } from "./index"
 import "../ListingPage/ListingPage.css"
 
 export const Listing = () => {
@@ -46,15 +46,15 @@ export const Listing = () => {
                 listingsToShow.map(x => {
                     return (
                         <div className="flex-row-fill-listing-getById">
-                            <Segment raised className="employee-getById-segments">
-                                <div>{`First Name: ${x.firstName}`}</div>
-                                <div>{`Last Name: ${x.lastName}`}</div>
+                            <Segment raised className="listing-getById-segments">
+                                <div></div>
+                                <div></div>
                                 <div className="button-container-listing-getById">
                                     <Button
                                         color="violet"
                                         onClick={() => {
                                             history.push(
-                                                routes.listingGetById.replace(":id", `${x.id}`)
+                                                render.listingGetById.replace(":id", `${x.id}`)
                                             )
                                         }}
                                     >
