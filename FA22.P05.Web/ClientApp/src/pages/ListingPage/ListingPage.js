@@ -1,9 +1,7 @@
 ﻿import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Segment } from "semantic-ui-react";
-import baseUrl from "../../baseUrl";
-import { render } from "../../index";
+import { ListingDto } from "../../constants/types";
 import "./ListingPage.css";
 
 export const Listing = () => {
@@ -13,7 +11,8 @@ export const Listing = () => {
   const [Error, setError] = useState("");
 
   useEffect(() => {
-    axios.get(`${baseUrl}/api/listings`).then((response) => {
+      axios.get < ListingDto[]> (`/api/listings`)
+          .then((response) => {
       console.log("message");
       if (response.data.hasErrors) {
         response.data.errors.forEach((err) => {
@@ -51,11 +50,9 @@ export const Listing = () => {
                 <div className="button-container-listing-getById">
                   <Button
                     color="violet"
-                    onClick={() => {
-                      navigate.push(
-                        render.listingGetById.replace(":id", `${x.id}`)
-                      );
-                    }}
+                    onClick={() => 
+                      navigate("/listings")
+                    }
                   >
                     See More
                   </Button>

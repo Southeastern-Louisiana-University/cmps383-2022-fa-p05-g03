@@ -130,7 +130,7 @@ const SignUp = () => {
                                         fullWidth
                                         name="password2"
                                         label="Confirm Password"
-                                        type="password2"
+                                        type="password"
                                         id="password2"
                                         autoComplete="new-password"
                                         variant="filled"

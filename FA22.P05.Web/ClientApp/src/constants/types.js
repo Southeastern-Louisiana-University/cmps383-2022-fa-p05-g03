@@ -14,14 +14,11 @@ export type AnyObject = {
     [index: string]: any
 };
 
-export  ListingDto  = {
-    firstName: string,
-    lastName: string,
-    socialSecurityNumber: string,
-    dateOfBirth: string,
-    dateOfEmployment: string,
-    licenseNumber: string,
-    licenseExpiration: string,
-    medicalExpiration: string,
-    truckId?: number,
+export type ListingDto  = {
+    id: number,
+    name: string,
+    price: number,
+    startUtc: Date,
+    endUtc: Date
+    
 };

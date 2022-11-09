@@ -64,13 +64,13 @@ export default function Header() {
                 />
                 <ul>
                     <li>
-                        <Link to="/">LISTINGS</Link>
+                        <Link to="/ListingPage">LISTINGS</Link>
                     </li>
                     <li>
-                        <Link to="/about">USER</Link>
+                        <Link to="/UserPage">USER</Link>
                     </li>
                     <li>
-                        <Link to="/users">CHECKOUT</Link>
+                        <Link to="/">CHECKOUT</Link>
                     </li>
                 </ul>
             </Toolbar>
