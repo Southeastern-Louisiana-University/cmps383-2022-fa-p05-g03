@@ -42,6 +42,7 @@ export default function Header() {
             <Toolbar
                 component="nav"
                 variant="dense"
+                justifyContent="space-between"
                 sx={{
                     borderLeft: 3,
                     borderRight: 3,

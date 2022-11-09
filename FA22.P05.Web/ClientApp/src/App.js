@@ -31,7 +31,7 @@ export default function App() {
             <ThemeProvider theme={theme}>
                 <CssBaseline />
                 <Container maxWidth="lg">
-                    <NavBar title="GAME X-CHANGE" sections={sections} />
+                    <NavBar title="GAME X-CHANGE" />
                 </Container>
             </ThemeProvider>
             <Outlet />
