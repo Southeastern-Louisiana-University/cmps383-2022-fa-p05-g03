@@ -13,6 +13,7 @@ render(
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<App />}>
+                <Route path="HomePage" element={<HomePage />} />
                 <Route path="SignUpPage" element={<SignUpPage />} />
                 <Route path="LoginPage" element={<LoginPage />} />
                 <Route path="UserPage" element={<UserPage />} />

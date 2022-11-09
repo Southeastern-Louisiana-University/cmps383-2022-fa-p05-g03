@@ -1,17 +1,14 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
-import Link from "@mui/material/Link";
+import {Link} from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import { useNavigate } from "react-router-dom";
 
 import "./NavBar.css";
 import logo from "../logo.png";
 
-export default function Header(props) {
-    const { sections, title } = props;
-
+export default function Header() {
     let navigate = useNavigate();
     const SignUpPage = () => {
         let path = `./SignUpPage`;
@@ -64,29 +61,18 @@ export default function Header(props) {
                     size="small"
                     focused
                 />
-                {sections.map((section) => (
-                    <Link
-                        color="inherit"
-                        noWrap
-                        key={section.title}
-                        variant="body2"
-                        href={section.url}
-                        sx={{ p: 1, flexShrink: 0 }}
-                    >
-                        {section.title}
-                    </Link>
-                ))}
+                <ul>
+                    <li>
+                        <Link to="/">LISTINGS</Link>
+                    </li>
+                    <li>
+                        <Link to="/about">USER</Link>
+                    </li>
+                    <li>
+                        <Link to="/users">CHECKOUT</Link>
+                    </li>
+                </ul>
             </Toolbar>
         </React.Fragment>
     );
 }
-
-Header.propTypes = {
-    sections: PropTypes.arrayOf(
-        PropTypes.shape({
-            title: PropTypes.string.isRequired,
-            url: PropTypes.string.isRequired,
-        })
-    ).isRequired,
-    title: PropTypes.string.isRequired,
-};
