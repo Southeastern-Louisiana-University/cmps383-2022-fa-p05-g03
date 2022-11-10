@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+## Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a template made by [reecewbourgeois](https://github.com/reecewbourgeois)
 
-## Available Scripts
+## Setup (VS Code)
 
-In the project directory, you can run:
+1. Install the [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension
+2. Install the [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) extension
+3. Create a folder called `.vscode` in the root of your project
+4. Create a file called `tasks.json` in the `.vscode` folder with the following code:
 
-### `npm start`
+```json
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "start",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "isBackground": true, // This prevents the launch.json to wait for the completion of the task
+      "problemMatcher": {
+        "owner": "custom", // This is not needed but, required by the problemMatcher Object
+        "pattern": {
+          "regexp": "^$" // This is not needed but, required by the problemMatcher Object
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Compiling...", // Signals the begin of the Task
+          "endsPattern": "Compiled .*" // Signals that now the initialization of the task is complete
+        }
+      }
+    }
+  ]
+}
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+5. Create a file called `launch.json` in the `.vscode` folder with the following code:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug in Edge",
+      "type": "msedge", // I use Edge, but you can use whatever you want. Intellisense will show you the options.
+      "request": "launch",
+      "url": "http://localhost:3000", // create-react-app's default port 3000
+      "webRoot": "${workspaceRoot}/src",
+      "preLaunchTask": "npm: start" // Add prelaunch Task npm: start (defined in tasks.json)
+    }
+  ]
+}
+```
 
-### `npm test`
+6. Create a file called `.env` in the root of your project with the following code:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+BROWSER=none
+```
+**Note:** In the browser window that opens when you launch this task, I would recommend installing the `React Developer Tools` extension. This will allow you to inspect the React components in the browser more seamlessly. Also, you will need to manually kill the terminal that opens in VS Code when you want to stop debugging.
 
-### `npm run build`
+## How to Run
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Run `npm i` to install dependencies
+2. Run `npm start` to start the application
