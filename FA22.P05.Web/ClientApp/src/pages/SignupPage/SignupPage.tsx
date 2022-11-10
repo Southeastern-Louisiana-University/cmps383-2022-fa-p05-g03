@@ -14,19 +14,20 @@ import { Snackbar } from "@material-ui/core";
 import logo from "../../resources/logo.png";
 import { PageRoutes } from "../../models/PageRoutes";
 import { useNavigate } from "react-router-dom";
-
-const theme = createTheme();
 import styles from "./_SignupPage.module.scss";
 
-/**
- * <description here>
- */
+const theme = createTheme();
+
+//Signup Page for the App
 export function SignupPage(): React.ReactElement {
   const navigate = useNavigate();
+
+  //Navigate back to Home Page
   const navigateToHomePage = (): void => {
     navigate(PageRoutes.HOME);
   };
 
+  //Signup alert
   const [open, setOpen] = React.useState(false);
   const handleClose = () => {
     setOpen(false);
@@ -40,18 +41,7 @@ export function SignupPage(): React.ReactElement {
           maxWidth="xs"
         >
           <CssBaseline />
-          <Box
-            sx={{
-              marginTop: 6,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              background: "black",
-              padding: "25px 25px 25px 25px",
-              border: 3,
-              borderColor: "white",
-            }}
-          >
+          <Box className={styles.box}>
             <img
               className={styles.img}
               src={logo}

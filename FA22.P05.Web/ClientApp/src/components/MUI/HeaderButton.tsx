@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import { Button, styled } from "@mui/material";
 import type { ButtonProps } from "@mui/material";
 

@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import { App } from "./App";
 
-// This prevents null errors in the root element
+//This prevents null errors in the root element
 const elementId = document.getElementById("root");
 if (elementId) {
   const root = createRoot(elementId);

@@ -5,23 +5,18 @@
 
 .toolbar {
   width: calc(100% - 2rem);
-
   display: flex;
   flex-direction: column;
-
   padding-left: 1rem;
   padding-right: 1rem;
-
   border-left: 3px solid white;
   border-right: 3px solid white;
   border-bottom: 3px solid white;
-
   background-color: black;
 }
 
 .topHalf {
   width: 100%;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -30,7 +25,6 @@
 
 .bottomHalf {
   width: 100%;
-
   display: flex;
   flex-direction: row;
   align-items: center;
