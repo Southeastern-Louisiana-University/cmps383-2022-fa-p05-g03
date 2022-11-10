@@ -50,7 +50,6 @@ export function LoginPage(): React.ReactElement {
               alt="Game X-Change"
               onClick={navigateToHomePage}
             />
-
             <Typography
               component="h1"
               variant="h5"
