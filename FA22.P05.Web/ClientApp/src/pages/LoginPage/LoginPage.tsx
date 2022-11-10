@@ -45,6 +45,8 @@ export function LoginPage(): React.ReactElement {
             <img
               className={styles.img}
               src={logo}
+              width="250"
+              height="100"
               alt="Game X-Change"
               onClick={navigateToHomePage}
             />

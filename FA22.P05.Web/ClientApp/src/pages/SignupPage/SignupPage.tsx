@@ -97,7 +97,6 @@ export function SignupPage(): React.ReactElement {
                     autoComplete="new-password"
                     variant="filled"
                     color="secondary"
-                    helperText="Must be at least 8 characters and include one capital letter, number, and special character"
                   />
                 </Grid>
                 <Grid
