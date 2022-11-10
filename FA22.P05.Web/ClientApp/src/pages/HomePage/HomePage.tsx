@@ -6,46 +6,33 @@ import { HeaderButton } from "../../components/MUI/HeaderButton";
 import { NavButton } from "../../components/MUI/NavButton";
 import { PageRoutes } from "../../models/PageRoutes";
 import logo from "../../resources/logo.png";
-
 import styles from "./_HomePage.module.scss";
 
-/**
- * This is the home page for the app.
- */
+//Home Page for the App
 export function HomePage(): React.ReactElement {
   const navigate = useNavigate();
 
-  /**
-   * Navigate to the login page.
-   */
+  //Navigate to Login Page
   const navigateToLoginPage = (): void => {
     navigate(PageRoutes.LOGIN_PAGE);
   };
 
-  /**
-   * Navigate to the signup page.
-   */
+  //Navigate to Signup Page
   const navigateToSignupPage = (): void => {
     navigate(PageRoutes.SIGNUP_PAGE);
   };
 
-  /**
-   * Navigate to the listings page.
-   */
+  //Navigate to Listing Page
   const navigateToListingPage = (): void => {
     navigate(PageRoutes.LISTING_PAGE);
   };
 
-  /**
-   * Navigate to the users page.
-   */
+  //Navigate to User Page
   const navigateToUserPage = (): void => {
     navigate(PageRoutes.USER_PAGE);
   };
 
-  /**
-   * Navigate to the checkout page.
-   */
+  //Navigate to Checkout Page
   const navigateToCheckoutPage = (): void => {
     navigate(PageRoutes.CHECKOUT_PAGE);
   };
@@ -86,7 +73,6 @@ export function HomePage(): React.ReactElement {
             sx={{ input: { background: "black", color: "white" }, width: "25%" }}
             variant="outlined"
           />
-
           <NavButton onClick={navigateToListingPage}> ALL LISTINGS</NavButton>
           <NavButton onClick={navigateToUserPage}>MY LISTINGS</NavButton>
           <NavButton onClick={navigateToCheckoutPage}>CHECKOUT</NavButton>

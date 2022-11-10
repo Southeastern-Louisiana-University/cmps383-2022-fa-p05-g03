@@ -14,20 +14,20 @@ import { Snackbar, StylesProvider } from "@material-ui/core";
 import logo from "../../resources/logo.png";
 import { PageRoutes } from "../../models/PageRoutes";
 import { useNavigate } from "react-router-dom";
-import styles from './_LoginPage.module.scss';
-
+import styles from "./_LoginPage.module.scss";
 
 const theme = createTheme();
 
-/**
- * <description here>
- */
+//Login Page for the App
 export function LoginPage(): React.ReactElement {
   const navigate = useNavigate();
+
+  //Navigate back to Home Page
   const navigateToHomePage = (): void => {
     navigate(PageRoutes.HOME);
   };
 
+  //Login Alert
   const [open, setOpen] = React.useState(false);
   const handleClose = () => {
     setOpen(false);
@@ -41,28 +41,15 @@ export function LoginPage(): React.ReactElement {
           maxWidth="xs"
         >
           <CssBaseline />
-          <Box
-            sx={{
-              marginTop: 6,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              background: "black",
-              padding: "25px 25px 25px 25px",
-              border: 3,
-              borderColor: "white",
-            }}
-          >
-
-              <img
-                className={styles.img}
-                src={logo}
-                alt="Game X-Change"
-                width="250"
-                height="100"
-                onClick={navigateToHomePage}
-              />
-
+          <Box className={styles.box}>
+            <img
+              className={styles.img}
+              src={logo}
+              width="250"
+              height="100"
+              alt="Game X-Change"
+              onClick={navigateToHomePage}
+            />
             <Typography
               component="h1"
               variant="h5"

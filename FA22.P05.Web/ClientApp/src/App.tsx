@@ -9,9 +9,7 @@ import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { SignupPage } from "./pages/SignupPage/SignupPage";
 import backgroundVideo from "./resources/background.mp4";
 
-/**
- * The primary component for the web app.
- */
+//Primary Component for App
 export function App(): React.ReactElement {
   return (
     <div className={styles.app}>
@@ -46,10 +44,6 @@ export function App(): React.ReactElement {
           element={<ListingPage />}
           path={PageRoutes.LISTING_PAGE}
         />
-        {/* <Route
-          element={<ListingPage />}
-          path={PageRoutes.LISTING_PAGE}
-        /> */}
 
         {/* If the user tries to navigate to a page that does not exist, show this page */}
         <Route
