@@ -3,10 +3,10 @@ import type { ButtonProps } from "@mui/material";
 
 export const HeaderButton = styled(Button)<ButtonProps>(() => ({
   color: "black",
-  background: "linear-gradient(to top, #a1ffce, #faffd1)",
+  background: "linear-gradient(to bottom, #00d2ff, #928dab)",
 
   "&:hover": {
-    backgroundColor: "white",
+    background: "white",
     color: "black",
   },
 }));
