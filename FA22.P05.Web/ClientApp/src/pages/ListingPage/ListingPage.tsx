@@ -9,6 +9,17 @@ import logo from "../../resources/logo.png";
 import styles from "./_ListingPage.module.scss";
 import { useEffect, useState } from "react";
 import { ListingDto } from "../../constants/types";
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import CssBaseline from "@mui/material/CssBaseline";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
 
 //Home Page for the App
 export function ListingPage(): React.ReactElement {
@@ -94,7 +105,104 @@ export function ListingPage(): React.ReactElement {
                         <NavButton onClick={navigateToUserPage}>MY LISTINGS</NavButton>
                         <NavButton onClick={navigateToCheckoutPage}>CHECKOUT</NavButton>
                     </div>
+                    <div className={styles.space}>
+                        <Box sx={{ p: 6 }}></Box>
+                    </div>
+                    <CssBaseline />
+                    <div className={styles.seeListings}>
+                        {/* Hero unit */}
+                        <Box className={styles.seeListings}
+                            sx={{
+                                bgcolor: "black",
+                                pt: 8,
+                                pb: 6,
+                            }}
+                        >
+                            <Container>
+                                <Typography
+                                    component="h1"
+                                    variant="h2"
+                                    align="center"
+                                    color="white"
+                                    gutterBottom
+                                >
+                                    All Listings
+                                </Typography>
+                                <Typography align="center" >Select a listing to view closer</Typography>
+                            </Container>
+                        </Box>
+                        <Container className={styles.seeListings}>
+                            {/* End hero unit */}
+                            <Grid container spacing={3}>
+                                {listingsToShow && listingsToShow?.map((response) => (
+                                    <Grid key={response.id} xs={12} sm={6} md={4}>
+                                        <Button
+                                            sx={{
+                                                "&:hover": {
+                                                    backgroundColor: "white",
+                                                    transition: "800ms",
+                                                },
+                                            }}
+                                            onClick={() => navigate(`/listings/${response.id}`)}
+                                        >
+                                            <Card
+                                                sx={{
+                                                    height: "100%",
+                                                    display: "flex",
+                                                    flexDirection: "column",
+                                                    border: "2px solid",
+                                                    borderColor: "white",
+                                                }}
+                                            >
+                                                <CardMedia
+                                                    component="img"
+                                                    sx={{
+
+                                                        pt: "20%",
+                                                    }}
+                                                    image="https://source.unsplash.com/random"
+                                                    alt="random"
+                                                />
+
+                                                <CardContent sx={{ flexGrow: 1 }}>
+                                                    <Typography
+                                                        gutterBottom
+                                                        variant="h5"
+                                                        component="h2"
+                                                    ></Typography>
+                                                    <Typography
+                                                        variant="h5"
+                                                        sx={{
+                                                            borderStyle: "double",
+                                                            textcolor: "white",
+                                                            borderColor: "grey",
+                                                        }}
+                                                    >
+                                                        Title: {response.name + "\n"}
+                                                        Price: {response.price + "\n"}
+                                                    </Typography>
+                                                </CardContent>
+                                            </Card>
+                                        </Button>
+                                    </Grid>
+                                ))}
+                            </Grid>
+                        </Container>
+                    </div>
+                    {/* Footer */}
+                    <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
+                        <Typography
+                            variant="subtitle1"
+                            align="center"
+                            color="text.secondary"
+                            component="p"
+                        >
+                            Select a listing to BUY.
+                        </Typography>
+                    </Box>
+                    {/* End footer */}
                 </div>
-            </div>
+                </div>
+                
         );
     }
