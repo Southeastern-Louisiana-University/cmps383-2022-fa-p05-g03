@@ -34,7 +34,7 @@ export function LoginPage(): React.ReactElement {
   const submitLogin = (values: LoginDto) => {
     axios.post<LoginDto>("api/authentication/login", values).then(() => {
       console.log("Successfully logged in!");
-      navigate("/");
+      navigate(PageRoutes.HOME);
     });
   };
 
