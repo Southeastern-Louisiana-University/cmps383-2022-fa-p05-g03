@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { useNavigate, Link as RouterLink } from "react-router-dom";
 import axios from "axios";
-import { Field, Form, Formik } from "formik";
+import { Form, Formik } from "formik";
 
 import Link from "@mui/material/Link";
 import Button from "@mui/material/Button";
@@ -17,6 +17,7 @@ import { LoginDto } from "../../models/types";
 import logo from "../../resources/logo.png";
 import { PageRoutes } from "../../models/PageRoutes";
 import styles from "./_LoginPage.module.scss";
+import { TextField } from "@mui/material";
 
 const theme = createTheme();
 
@@ -85,7 +86,7 @@ export function LoginPage(): React.ReactElement {
                       item
                       xs={12}
                     >
-                      <Field
+                      <TextField
                         sx={{ input: { background: "white", color: "black" } }}
                         required
                         fullWidth
@@ -101,7 +102,7 @@ export function LoginPage(): React.ReactElement {
                       item
                       xs={12}
                     >
-                      <Field
+                      <TextField
                         sx={{ input: { background: "white", color: "black" } }}
                         required
                         fullWidth
