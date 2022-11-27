@@ -7,6 +7,7 @@ import { HomePage } from "./pages/HomePage/HomePage";
 import { ListingPage } from "./pages/ListingPage/ListingPage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { SignupPage } from "./pages/SignupPage/SignupPage";
+import { CheckoutPage } from "./pages/CheckoutPage/CheckoutPage";
 import backgroundVideo from "./resources/background.mp4";
 
 //Primary Component for App
@@ -43,6 +44,10 @@ export function App(): React.ReactElement {
         <Route
           element={<ListingPage />}
           path={PageRoutes.LISTING_PAGE}
+        />
+        <Route
+          element={<CheckoutPage />}
+          path={PageRoutes.CHECKOUT_PAGE}
         />
 
         {/* If the user tries to navigate to a page that does not exist, show this page */}
