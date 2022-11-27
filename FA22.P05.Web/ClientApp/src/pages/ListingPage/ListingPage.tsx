@@ -90,7 +90,6 @@ export function ListingPage(): React.ReactElement {
                         </HeaderButton>
                     </div>
 
-                    {/* Search Bar & Links */}
                     <div className={styles.bottomHalf}>
                         <TextField
                             color="primary"
@@ -109,7 +108,6 @@ export function ListingPage(): React.ReactElement {
                     </div>
                     <CssBaseline />
                     <div className={styles.seeListings}>
-                        {/* Hero unit */}
                         <Box className={styles.seeListings}
                             sx={{
                                 bgcolor: "black",
@@ -131,7 +129,6 @@ export function ListingPage(): React.ReactElement {
                             </Container>
                         </Box>
                         <Container className={styles.seeListings}>
-                            {/* End hero unit */}
                             <Grid container spacing={3}>
                                 {listingsToShow && listingsToShow?.map((response) => (
                                     <Grid key={response.id} xs={12} sm={6} md={4}>
@@ -188,18 +185,6 @@ export function ListingPage(): React.ReactElement {
                             </Grid>
                         </Container>
                     </div>
-                    {/* Footer */}
-                    <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
-                        <Typography
-                            variant="subtitle1"
-                            align="center"
-                            color="text.secondary"
-                            component="p"
-                        >
-                            Select a listing to BUY.
-                        </Typography>
-                    </Box>
-                    {/* End footer */}
                 </div>
                 </div>
                 
