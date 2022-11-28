@@ -111,22 +111,20 @@ export function ListingPage(): React.ReactElement {
                         <Box className={styles.seeListings}
                             sx={{
                                 bgcolor: "black",
-                                pt: 8,
-                                pb: 6,
+                                pt: 20,
+                                pb: 100,
                             }}
                         >
-                            <Container>
+                            <div className={styles.seeListings}>
                                 <Typography
                                     component="h1"
                                     variant="h2"
                                     align="center"
                                     color="white"
-                                    gutterBottom
                                 >
                                     All Listings
                                 </Typography>
-                                <Typography align="center" >Select a listing to view closer</Typography>
-                            </Container>
+                            </div>
                         </Box>
                         <Container className={styles.seeListings}>
                             <Grid container spacing={3}>
