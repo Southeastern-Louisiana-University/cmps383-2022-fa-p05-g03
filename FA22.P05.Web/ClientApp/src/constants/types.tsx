@@ -14,6 +14,8 @@ export type ListingDto = {
     price: number;
     startUtc: Date;
     endUtc: Date;
+    phoneNum: string;
+    eMail: string;
 };
 
 export type LoginDto = {

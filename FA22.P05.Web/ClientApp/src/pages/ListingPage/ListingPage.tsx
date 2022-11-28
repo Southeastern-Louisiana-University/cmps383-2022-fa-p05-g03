@@ -20,47 +20,51 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
 
-//Home Page for the App
-export function ListingPage(): React.ReactElement {
-    const [listings, setListings] = useState<ListingDto[]>([]);
+    //Home Page for the App
+    export function ListingPage(): React.ReactElement {
+        const [listings, setListings] = useState<ListingDto[]>([]);
 
 
-    const navigate = useNavigate();
+        const navigate = useNavigate();
 
-    useEffect(() => {
-        axios.get<ListingDto[]>("/api/listings/active").then((response) => {
-            setListings(response.data);
-        });
-    }, []);
+        useEffect(() => {
+            axios.get<ListingDto[]>("/api/listings/active").then((response) => {
+                setListings(response.data);
+            });
+        }, []);
 
-    const [listing, setListing] = useState<ListingDto>();
+        const [listing, setListing] = useState<ListingDto>();
 
 
-    //Navigate to Login Page
-    const navigateToLoginPage = (): void => {
-        navigate(PageRoutes.LOGIN_PAGE);
-    };
+        //Navigate to Login Page
+        const navigateToLoginPage = (): void => {
+            navigate(PageRoutes.LOGIN_PAGE);
+        };
 
-    //Navigate to Signup Page
-    const navigateToSignupPage = (): void => {
-        navigate(PageRoutes.SIGNUP_PAGE);
-    };
+        //Navigate to Signup Page
+        const navigateToSignupPage = (): void => {
+            navigate(PageRoutes.SIGNUP_PAGE);
+        };
 
-    //Navigate to Listing Page
-    const navigateToListingPage = (): void => {
-        navigate(PageRoutes.LISTING_PAGE);
-    };
+        //Navigate to Listing Page
+        const navigateToListingPage = (): void => {
+            navigate(PageRoutes.LISTING_PAGE);
+        };
 
-    //Navigate to User Page
-    const navigateToUserPage = (): void => {
-        navigate(PageRoutes.USER_PAGE);
-    };
+        //Navigate to User Page
+        const navigateToUserPage = (): void => {
+            navigate(PageRoutes.USER_PAGE);
+        };
 
-    //Navigate to Checkout Page
-    const navigateToCheckoutPage = (): void => {
-        navigate(PageRoutes.CHECKOUT_PAGE);
-    };
-        
+        //Navigate to Checkout Page
+        const navigateToCheckoutPage = (): void => {
+            navigate(PageRoutes.CHECKOUT_PAGE);
+        };
+
+        const showContactInfo = (): void => {
+            alert( "**Phone Number**\n**E-Mail**");
+        }
+
 
         const listingsToShow = listings;
 
@@ -111,8 +115,8 @@ export function ListingPage(): React.ReactElement {
                         <Box className={styles.seeListings}
                             sx={{
                                 bgcolor: "black",
-                                pt: 20,
-                                pb: 100,
+                                pt: 30,
+                                pb: 120,
                             }}
                         >
                             <div className={styles.seeListings}>
@@ -127,9 +131,9 @@ export function ListingPage(): React.ReactElement {
                             </div>
                         </Box>
                         <Container className={styles.seeListings}>
-                            <Grid container spacing={3}>
+                            <Grid container spacing={4}>
                                 {listingsToShow && listingsToShow?.map((response) => (
-                                    <Grid key={response.id} xs={12} sm={6} md={4}>
+                                    <Grid key={response.id} xs={14} sm={7} md={5}>
                                         <Button
                                             sx={{
                                                 "&:hover": {
@@ -145,7 +149,7 @@ export function ListingPage(): React.ReactElement {
                                                     display: "flex",
                                                     flexDirection: "column",
                                                     border: "2px solid",
-                                                    borderColor: "white",
+                                                    borderColor: "lightblue",
                                                 }}
                                             >
                                                 <CardMedia
@@ -158,7 +162,7 @@ export function ListingPage(): React.ReactElement {
                                                     alt="random"
                                                 />
 
-                                                <CardContent sx={{ flexGrow: 1 }}>
+                                                <CardContent sx={{ flexGrow: 2 }}>
                                                     <Typography
                                                         gutterBottom
                                                         variant="h5"
@@ -169,12 +173,21 @@ export function ListingPage(): React.ReactElement {
                                                         sx={{
                                                             borderStyle: "double",
                                                             textcolor: "white",
-                                                            borderColor: "grey",
+                                                            borderColor: "purple",
                                                         }}
                                                     >
                                                         Title: {response.name + "\n"}
                                                         Price: {response.price + "\n"}
                                                     </Typography>
+                                                    <Button className={styles.contactInfo}
+                                                        sx={{
+                                                            "&:hover": {
+                                                                backgroundColor: "white",
+                                                                transition: "800ms",
+                                                            },
+                                                        }}
+                                                        onClick={showContactInfo}>Contact Seller</Button>;
+                                                    <Button></Button>
                                                 </CardContent>
                                             </Card>
                                         </Button>
@@ -184,7 +197,7 @@ export function ListingPage(): React.ReactElement {
                         </Container>
                     </div>
                 </div>
-                </div>
-                
+            </div>
+
         );
     }
