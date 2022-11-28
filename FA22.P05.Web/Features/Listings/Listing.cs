@@ -21,4 +21,6 @@ public class Listing
     public virtual User? Owner { get; set; }
 
     public virtual ICollection<ItemListing> ItemsForSale { get; set; } = new List<ItemListing>();
+    public string? PhoneNum { get; set; }
+    public string? Email { get; set; }
 }

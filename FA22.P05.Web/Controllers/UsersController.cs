@@ -17,7 +17,7 @@ public class UsersController : ControllerBase
         this.userManager = userManager;
     }
 
-    [HttpPost]
+    [HttpPost("new")]
     [Authorize(Roles = RoleNames.Admin)]
     public async Task<ActionResult<UserDto>> Create(CreateUserDto dto)
     {
@@ -41,7 +41,7 @@ public class UsersController : ControllerBase
                 return BadRequest();
             }
         }
-        catch (InvalidOperationException e) when(e.Message.StartsWith("Role") && e.Message.EndsWith("does not exist."))
+        catch (InvalidOperationException e) when (e.Message.StartsWith("Role") && e.Message.EndsWith("does not exist."))
         {
             return BadRequest();
         }

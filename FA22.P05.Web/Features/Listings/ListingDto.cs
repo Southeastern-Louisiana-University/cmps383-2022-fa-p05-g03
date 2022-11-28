@@ -8,4 +8,6 @@ public class ListingDto
     public decimal? Price { get; set; }
     public DateTimeOffset? StartUtc { get; set; }
     public DateTimeOffset? EndUtc { get; set; }
+    public string? PhoneNum { get; set; }
+    public string? Email { get; set; }
 }
